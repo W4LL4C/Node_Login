@@ -15,6 +15,7 @@ async function loadUsers() {
   }
 }
 
+
 loadUsers();
 
 router.get('/', (req, res) => {
