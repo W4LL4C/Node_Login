@@ -10,6 +10,7 @@ const client = new MongoClient(uri, {useNewUrlParser: true, useUnifiedTopology: 
 //nome coleção
 const COLLECTION_NAME = 'aula';
 
+
 async function withMongoDb(callback) {
   const client = new MongoClient(uri, {useNewUrlParser: true, useUnifiedTopology: true});
   try {
