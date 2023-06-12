@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<!-- Configurações -->     
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<header></header>
+
+<body>
+<!-- Css da página -->  
+<style>
+ 
+    header{
+	    width:100%;
+	    height:10px;
+	    background-color: #f1862e;
+	    overflow: hidden;
+    }
+
+    body{
+	    margin:5px;
+    }
+
+    nav{
+	    width:100%;
+	    height:90px;
+	}
+
+    .menu{
+	    width:205px;
+	    height:90px;
+	    float:left;
+    }
+
+    .menu img{
+	    height:100%;
+        padding: 4px 10px 1px 50px;
+    }
+
+    ul{
+	    list-style: none;
+	    padding: 1px;
+	    display:block;
+	    margin: 10px;
+    }
+    li a{
+	    padding:30px 10px;
+	    width: 234px;
+	    height: 15px;
+	    display: block;
+	    text-decoration: none;
+	    font-family: 'Inter', Arial, sans-serif;
+	    font-weight: 400;
+	    font-size: small;
+	    color:#f1862e;
+	    float:left;
+	    text-align: center;
+	    margin-left: 1px;
+	}
+
+    a{
+	    text-decoration: none;
+	    color: #000000;
+	    padding: 5px 5px;
+    }
+
+    a:hover{
+		text-decoration: underline;
+		color: #f8f5f5;
+		background-color:#f1862e;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        margin-left: 40px;
+    }
+
+    .gallery img {
+        width: 90%;
+        height: 90%;
+    }
+
+    h1{
+        text-align: center;
+        padding: 40px 5px;
+    }
+
+    footer{
+	    width:100%;
+	    height:10px;
+	    background-color: #f1862e;
+	    overflow: hidden;
+    }
+
+</style>
+
+<!-- menu da página -->
+
+<nav>
+    <div class="menu">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcW8--3uMWgTWeBalCzGJuD71rPDBjTZrIg&usqp=CAU" alt="A imagem não pode ser exibida"/>
+    </div>
+    <ul>
+        <li><a href="/index">HOME</a></li>
+        <li><a href="/galeria">GALERIA</a></li>
+        <li><a href="/eventos">EVENTOS</a></li>
+        <li><a href="/login">LOGIN</a></li>
+   </ul>
+</nav>
+
+<!-- Galeria de fotos - corpo da página-->
+
+<h1>Galeria de fotos</h1>
+
+  <div class="gallery">
+    <div class="cl1">
+        <img src="https://semexe.com/blog/wp-content/uploads/2021/02/pantani1-1536x1025.jpg" alt="Foto 1">
+            <h5>Bianchi Mega Pro, 1998</h5>
+    </div>
+    <div class="cl2">
+        <img src="https://static.wixstatic.com/media/aeeec0_d9a97401a0224abda7e6f16ac9aeff75~mv2.jpg/v1/fill/w_718,h_539,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_d9a97401a0224abda7e6f16ac9aeff75~mv2.jpg" alt="Foto 2">
+            <h5>Bianchi Campione del Mondo CX, 1975</h5>
+    </div>
+    <div class="cl3">
+        <img src="https://static.wixstatic.com/media/aeeec0_5faf73b1eb67449aaa18766268d91a85~mv2_d_4032_3024_s_4_2.jpg/v1/fill/w_792,h_594,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_5faf73b1eb67449aaa18766268d91a85~mv2_d_4032_3024_s_4_2.jpg" alt="Foto 3">
+            <h5>Benotto 800 EX, 1978</h5>
+    </div>
+    <div class="cl4">
+        <img src="https://static.wixstatic.com/media/aeeec0_3c34b5380f574340bcc9b0e88f45ef9d~mv2.jpg/v1/fill/w_792,h_594,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_3c34b5380f574340bcc9b0e88f45ef9d~mv2.jpg" alt="Foto 4">
+            <h5>Eddy Merckx Strada, 1992</h5>
+    </div>
+    <div class="cl5">
+    <img src="https://static.wixstatic.com/media/aeeec0_633016843b3b4c08af06853e7c01b6a6~mv2.jpg/v1/fill/w_718,h_539,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_633016843b3b4c08af06853e7c01b6a6~mv2.jpg" alt="Foto 5">
+        <h5>Bianchi Krono, 1989</h5>
+    </div>
+    <div class="cl6">
+    <img src="https://cdn.shopify.com/s/files/1/0726/1621/4811/files/superpista_text1.jpg?v=1682692040&width=1920" alt="Foto 6">
+        <h5>Cinelli Supercorsa, 1950</h5>
+    </div>
+  </div>
+</br>
+<footer></footer>
+
+</body>
