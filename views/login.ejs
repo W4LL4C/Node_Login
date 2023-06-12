@@ -131,17 +131,15 @@
 <!-- Login - corpo da página-->
 
 <h4>Já possui uma conta? Faça o seu login. </h4>
-<form>
-      
-    <label for="email">Login(E-mail):</label>
-    <input type="text" id="email" required>
-    <label for="senha">Senha:</label>
-    <input type="text" id="senha">
-</br>   
-    <h5>Não possui uma conta?<a href="/cadastrogeral">Cadastre-se aqui</a>. </h5>
-    
-    <button type="submit" onclick="window.location.href = '/cadastrogeral';">Login</button>
-</form>
+    <form action="/log" method="POST">
+        <label for="email">Login(E-mail):</label>
+        <input type="email" name="email" required>
+        <label for="password">Senha:</label>
+        <input type="password" name="password" required>
+        </br>
+        <h5>Não possui uma conta?<a href="/cadastrogeral">Cadastre-se aqui</a>.</h5>
+        <button type="submit">Login</button>
+    </form>
 </br></br>
 <footer></footer>
 
