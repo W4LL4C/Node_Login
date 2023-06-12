@@ -24,6 +24,18 @@ router.get('/', (req, res) => {
   res.render('index', { message: req.flash('error'), success: req.flash('success')[0] });
 });
 
+/* ROTA PARA O LOGIN UTILIZANDO O GET  
+*/
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
+/* ROTA PARA O FORMULARIO UTILIZANDO O GET  
+*/
+router.get('/cadastrogeral', (req, res) => {
+  res.render('cadastrogeral');
+});
+
 /* ROTA PARA FAZER A AUTENTIFICAÇÃO DO USUARIO,
    SUCESSO DIRECIONA PARA A GALERIA
    FALHA DIRECIONA PARA O INDEX
@@ -45,6 +57,19 @@ router.post(
 router.get('/galeria', (req, res) => {
   if (req.isAuthenticated()) {
     res.render('galeria', { user: req.user });
+  } else {
+    res.redirect('/');
+  }
+});
+
+/* ROTA PARA O CADASTRO DAS BIKES
+   FAZ UMA REQUISIÇÃO PARA VER SE O USUARIO ESTÁ AUTENTICADO
+   SIM RENDERIZA O FORMULARIO DAS BIKES
+   FALHA DIRECIONA PARA O INDEX
+*/
+router.get('/cadbike', (req, res) => {
+  if (req.isAuthenticated()) {
+    res.render('cadastrobike', { user: req.user });
   } else {
     res.redirect('/');
   }

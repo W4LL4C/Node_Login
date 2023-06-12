@@ -67,32 +67,6 @@ app.use((err, req, res, next) => {
 
 app.set('view engine', 'ejs');
 
-
-// Rota principal
-app.get('/index', (req, res) => {
-    res.render('index');
-  });
-//Outras Rotas
-  app.get('/galeria', (req, res) => {
-    res.render('galeria');
-  });
-
-  app.get('/eventos', (req, res) => {
-    res.render('eventos');
-  });
-
-  app.get('/login', (req, res) => {
-    res.render('login');
-  });
-
-  app.get('/cadastrobike', (req, res) => {
-    res.render('cadastrobike');
-  });
-
-  app.get('/cadastrogeral', (req, res) => {
-    res.render('cadastrogeral');
-  });
-
 // Iniciar o servidor
 
 const PORT = process.env.PORT || 3000;
