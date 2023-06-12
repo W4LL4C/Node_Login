@@ -18,10 +18,16 @@ async function loadUsers() {
 
 loadUsers();
 
+/* ROTA PARA O INDEX UTILIZANDO O GET  
+*/
 router.get('/', (req, res) => {
   res.render('index', { message: req.flash('error'), success: req.flash('success')[0] });
 });
 
+/* ROTA PARA FAZER A AUTENTIFICAÇÃO DO USUARIO,
+   SUCESSO DIRECIONA PARA A GALERIA
+   FALHA DIRECIONA PARA O INDEX
+*/
 router.post(
   '/log',
   passport.authenticate('local', {
@@ -31,6 +37,11 @@ router.post(
   })
 );
 
+/* ROTA PARA A GALERIA
+   FAZ UMA REQUISIÇÃO PARA VER SE O USUARIO ESTÁ AUTENTICADO
+   SIM RENDERIZA A GALERIA
+   FALHA DIRECIONA PARA O INDEX
+*/
 router.get('/galeria', (req, res) => {
   if (req.isAuthenticated()) {
     res.render('galeria', { user: req.user });
@@ -39,15 +50,32 @@ router.get('/galeria', (req, res) => {
   }
 });
 
+/* ROTA PARA OS EVENTOS
+   FAZ UMA REQUISIÇÃO PARA VER SE O USUARIO ESTÁ AUTENTICADO
+   SIM RENDERIZA OS EVENTOS
+   FALHA DIRECIONA PARA O INDEX
+*/
+
+router.get('/eventos', (req, res) => {
+  if (req.isAuthenticated()) {
+    res.render('eventos', { user: req.user });
+  } else {
+    res.redirect('/');
+  }
+});
+
+/* ROTA PARA  SAIR DA CONTA DE USUARIO
+   TE ENCAMINHA PARA O INDEX
+*/
 router.get('/logout', (req, res) => {
   const successMessage = 'Você saiu da sua conta';
   req.logout();
   res.render('index', { message: null, success: successMessage });
 });
 
-router.get('/signup', (req, res) => {
-  res.render('signup', { message: req.flash('error') });
-});
+/*  ROTA PARA O CADASTRO DE USUARIO
+    CAPTURA OS DADOS DO FORMULARIO NO ARQUIVO CADASTRO GERAL E SALVA NO BANCO DE DADOS MONGO DB
+*/
 
 router.post('/signup', async (req, res) => {
   try {
