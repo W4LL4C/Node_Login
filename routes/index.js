@@ -3,9 +3,9 @@ const router = express.Router();
 const passport = require('passport');
 const bcrypt = require('bcrypt');
 const { readData, writeData, deleteData } = require('../filestorage');
-
+const { lerData, escreverData} = require('../filestoragebike');
 let users = [];
-
+let bikes = [];
 // Carregar os dados dos usuários do MongoDB
 async function loadUsers() {
   try {
@@ -67,9 +67,9 @@ router.get('/galeria', (req, res) => {
    SIM RENDERIZA O FORMULARIO DAS BIKES
    FALHA DIRECIONA PARA O INDEX
 */
-router.get('/cadbike', (req, res) => {
+router.get('/cadastrobike', (req, res) => {
   if (req.isAuthenticated()) {
-    res.render('cadastrobike', { user: req.user });
+    res.render('cadastrobike', { user: req.user.fullname });
   } else {
     res.redirect('/');
   }
@@ -124,6 +124,26 @@ router.post('/signup', async (req, res) => {
     console.error(err);
     req.flash('error', 'Ocorreu um erro ao tentar criar a conta');
     res.redirect('/cadastrogeral');
+  }
+});
+
+/* ROTA DO FORMULARIO DAS BICICLETAS 
+*/
+
+router.post('/cadbike', async (req, res) => { 
+  try{  
+  const bike = {
+      nome: req.body.fullname,
+      url: req.file.path,
+      titulo: req.body.title
+    };
+    bikes.push(bike);
+    await escreverData(bikes);
+    res.redirect('/cadastrobike');
+  }catch (err) {
+    console.error(err);
+    req.flash('error', 'Ocorreu um erro ao tentar cadastrar a bike');
+    res.redirect('/galeria');
   }
 });
 

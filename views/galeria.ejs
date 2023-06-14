@@ -75,17 +75,26 @@
 		color: #f8f5f5;
 		background-color:#f1862e;
     }
-
-    .gallery {
+    
+    .galeria {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
-        margin-left: 40px;
+        
+    }
+    
+    .col img {
+        width: 89%;
+        height: 89%;
     }
 
-    .gallery img {
-        width: 90%;
-        height: 90%;
+        button {
+        margin-top: 10px;
+        padding: 10px 75px;
+        background-color: #f1862e;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-left: 40%;
     }
 
     h1{
@@ -128,33 +137,41 @@
 
 <h1>Galeria de fotos</h1>
 
-  <div class="gallery">
-    <div class="cl1">
-        <img src="https://semexe.com/blog/wp-content/uploads/2021/02/pantani1-1536x1025.jpg" alt="Foto 1">
-            <h5>Bianchi Mega Pro, 1998</h5>
+<div class="container text-center galeria">
+    <div class="row align-items-start">
+      <div class="col">
+        <img src="https://static.wixstatic.com/media/aeeec0_8f66215e3f9648e9b0fb7489a21fa96a~mv2_d_4032_3024_s_4_2.jpg/v1/fill/w_792,h_594,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_8f66215e3f9648e9b0fb7489a21fa96a~mv2_d_4032_3024_s_4_2.jpg" class="figure-img img-fluid rounded" alt="Foto 1">
+    <figcaption class="figure-caption">Francesco Moser, 1980.</figcaption>
+      </div>
+      <div class="col">
+        <img src="https://static.wixstatic.com/media/aeeec0_d9a97401a0224abda7e6f16ac9aeff75~mv2.jpg/v1/fill/w_718,h_539,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_d9a97401a0224abda7e6f16ac9aeff75~mv2.jpg" class="figure-img img-fluid rounded" alt="Foto 2">
+    <figcaption class="figure-caption">Bianchi Campione del Mondo CX, 1975.</figcaption>
+      </div>
+      <div class="col">
+        <img src="https://static.wixstatic.com/media/aeeec0_5faf73b1eb67449aaa18766268d91a85~mv2_d_4032_3024_s_4_2.jpg/v1/fill/w_792,h_594,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_5faf73b1eb67449aaa18766268d91a85~mv2_d_4032_3024_s_4_2.jpg" class="figure-img img-fluid rounded" alt="Foto 3">
+    <figcaption class="figure-caption">Benotto 800 EX, 1978.</figcaption>
+      </div>
     </div>
-    <div class="cl2">
-        <img src="https://static.wixstatic.com/media/aeeec0_d9a97401a0224abda7e6f16ac9aeff75~mv2.jpg/v1/fill/w_718,h_539,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_d9a97401a0224abda7e6f16ac9aeff75~mv2.jpg" alt="Foto 2">
-            <h5>Bianchi Campione del Mondo CX, 1975</h5>
-    </div>
-    <div class="cl3">
-        <img src="https://static.wixstatic.com/media/aeeec0_5faf73b1eb67449aaa18766268d91a85~mv2_d_4032_3024_s_4_2.jpg/v1/fill/w_792,h_594,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_5faf73b1eb67449aaa18766268d91a85~mv2_d_4032_3024_s_4_2.jpg" alt="Foto 3">
-            <h5>Benotto 800 EX, 1978</h5>
-    </div>
-    <div class="cl4">
-        <img src="https://static.wixstatic.com/media/aeeec0_3c34b5380f574340bcc9b0e88f45ef9d~mv2.jpg/v1/fill/w_792,h_594,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_3c34b5380f574340bcc9b0e88f45ef9d~mv2.jpg" alt="Foto 4">
-            <h5>Eddy Merckx Strada, 1992</h5>
-    </div>
-    <div class="cl5">
-    <img src="https://static.wixstatic.com/media/aeeec0_633016843b3b4c08af06853e7c01b6a6~mv2.jpg/v1/fill/w_718,h_539,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_633016843b3b4c08af06853e7c01b6a6~mv2.jpg" alt="Foto 5">
-        <h5>Bianchi Krono, 1989</h5>
-    </div>
-    <div class="cl6">
-    <img src="https://cdn.shopify.com/s/files/1/0726/1621/4811/files/superpista_text1.jpg?v=1682692040&width=1920" alt="Foto 6">
-        <h5>Cinelli Supercorsa, 1950</h5>
-    </div>
+    <div class="row align-items-start">
+        <div class="col">
+            <img src="https://static.wixstatic.com/media/aeeec0_3c34b5380f574340bcc9b0e88f45ef9d~mv2.jpg/v1/fill/w_792,h_594,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_3c34b5380f574340bcc9b0e88f45ef9d~mv2.jpg" class="figure-img img-fluid rounded" alt="Foto 4">
+            <figcaption class="figure-caption">Eddy Merckx Strada, 1992.</figcaption>
+        </div>
+        <div class="col">
+            <img src="https://static.wixstatic.com/media/aeeec0_633016843b3b4c08af06853e7c01b6a6~mv2.jpg/v1/fill/w_718,h_539,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/aeeec0_633016843b3b4c08af06853e7c01b6a6~mv2.jpg" class="figure-img img-fluid rounded"  alt="Foto 5">
+            <figcaption class="figure-caption">Bianchi Krono, 1989.</figcaption>
+        </div>
+        <div class="col">
+            <img src="https://cdn.shopify.com/s/files/1/0726/1621/4811/files/superpista_text1.jpg?v=1682692040&width=1920" class="figure-img img-fluid rounded" alt="Foto 6">
+            <figcaption class="figure-caption">Cinelli Supercorsa, 1950.</figcaption>
+        </br></br>
+            
+        </div>
+        
+      </div>
+      
   </div>
-</br>
-<footer></footer>
-
-</body>
+  
+    <button type="submit" onclick="window.location.href = '/cadastrobike';">Adicionar</button>
+  
+</br></br></body>

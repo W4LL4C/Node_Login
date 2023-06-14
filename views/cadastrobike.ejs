@@ -136,7 +136,8 @@
 <body>
   <h1>Cadastro de bicicletas</h1>
 
-  <form>
+  <form method="post" action="/cadbike">
+    <input type="hidden" name=fullname id="fullname" value="<%= user.fullname %>">
     <label for="photo">Adicione a foto da bicicleta:</label>
     <input type="file" id="photo">
 
