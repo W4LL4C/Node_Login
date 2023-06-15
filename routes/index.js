@@ -134,7 +134,7 @@ router.post('/cadbike', async (req, res) => {
   try{  
   const bike = {
       nome: req.body.fullname,
-      url: req.file.path,
+      url: req.body.photo,
       titulo: req.body.title
     };
     bikes.push(bike);
