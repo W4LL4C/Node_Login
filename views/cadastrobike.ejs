@@ -44,10 +44,10 @@
   <form method="post" action="/cadbike">
     <input type="hidden" name=fullname id="fullname" value="<%= user.fullname %>">
     <label for="photo">Adicione a foto da bicicleta:</label>
-    <input type="file" id="photo">
+    <input type="file" id="photo" name ="photo">
 
     <label for="title">Título (marca e ano da bicicleta):</label>
-    <input type="text" id="title">
+    <input type="text" id="title" name="title">
 
     <button type="submit">Cadastrar</button>
   </form>
